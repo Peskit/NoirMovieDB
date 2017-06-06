@@ -1,0 +1,75 @@
+/*
+Version: CCG 1.0
+Author: Anzhelika Katkova, Beate Nadolny, Lisa Schweiber
+*/
+@charset "utf-8";
+@font-face {
+  font-family: 'Franchise Fett';
+  src: local('Franchise Fett'), url(../typo/Franchise-Bold-hinted.ttf);
+}
+body {
+	font-family: calibri;
+	font-size: 20px;
+	color: #fff;  /* d-braun, Schriftfarbe */
+}
+h1, h2, h3, h4, h5, h6 { /* Headlines */
+	font-family: 'Franchise Fett', 'Calibri';
+	padding: 0 20px;
+	margin-bottom: 8px;
+}
+/* ~~ Hyperlink-Style ~~ */
+a img, a img:hover {
+	border: none;
+}
+a:link, a:visited {
+	color: #fff; /* hellrot */
+	text-decoration: none;
+}
+a:hover, a:active, a:focus {
+	color: #ccc;
+	text-decoration: none;
+}
+main {
+	position: relative;
+	top: 30px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 80%;
+	min-width: 700px;
+	min-height: 90%;
+}
+article {
+	background-color: rgba(0, 0, 0, 0.8);
+	min-height: 400px;
+	padding: 30px 40px;
+}
+header, .header {
+	height: 220px;
+	overflow: hidden;
+	z-index: 1000;
+}
+::-webkit-scrollbar { 
+    display: none; 
+}
+/* ~~ Menue-Div-Container ~~ */
+menubtn {
+	background-color: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	font-family: 'Franchise Fett', 'Calibri';
+	font-size: 30px;
+    min-width: 80px;
+    max-width: 150px;
+    height: 20px;
+    margin: 4px;
+    padding: 2px 5px;
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+}
+menubtn:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+details {
+	max-width: 300px;
+	padding-left: 15px;
+}

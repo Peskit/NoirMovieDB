@@ -1,0 +1,17 @@
+/*
+Version: CCG 1.0
+Author: Anzhelika Katkova, Beate Nadolny, Lisa Schweiber
+*/
+body {
+	background-image: url("../images/noir_bg.jpg");
+	background-size: 100%;
+}
+bodywrapper {
+	background-color: rgba(0, 0, 0, 0.4);
+	background-image: url("../images/bgstripes.png");
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
