@@ -1,3 +1,3 @@
-{ "name":"tim", "psw":"test"},
+[{ "name":"tim", "psw":"test"},
 { "name":"john", "psw":"test"},
 { "name":"ella", "psw":"test"}]
