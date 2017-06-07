@@ -48,7 +48,7 @@ th,td {
                                             	
                 }; 
                                                                  
-                xhttp.open("GET", "../json/mylist.json", true);
+                xhttp.open("GET", "../json/movielist.json", true);
                 //nochmal open macht nur letzte list auf "addliste.json", 
                 xhttp.send();
             }
@@ -70,7 +70,7 @@ th,td {
                     + myObj[i].jahr+ "<br> Genre: " + myObj[i].genre+ "<br> Schauspieler: " + myObj[i].schauspieler;
                		document.getElementById("showMovie").innerHTML = txt;
            		};
-           xhttp.open("GET", "../json/mylist.json", true);
+           xhttp.open("GET", "../json/movielist.json", true);
            xhttp.send();
         }
         </script>
