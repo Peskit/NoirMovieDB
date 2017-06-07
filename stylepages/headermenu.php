@@ -13,9 +13,9 @@
 		</td><td>
 		<img src="../images/spacer.png" width="50px">
 		</td><td>
-		<menubtn><a href="../index.html" target="content">Home</a></menubtn> | <menubtn><a href="../impressum.xml" target="content">Impressum</a></menubtn>
+		<menubtn><a href="../index.html" target="_parent">Home</a></menubtn> | <menubtn><a href="../newMovie.html" target="_parent">Neuer Film</a></menubtn>
 		<h4>Persoenlicher Bereich</h4>
-		<menubtn><a href="../profile.php" target="content">Profil</a></menubtn>
+		<menubtn><a href="../profile.php" target="_parent">Profil</a></menubtn>
 		</td>
 	</body>
 </html>

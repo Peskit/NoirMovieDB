@@ -19,13 +19,14 @@
         if(file_exists('../json/movielist.json'))  
         {  
             $current_data = file_get_contents('../json/movielist.json');  
-            $array_data = json_decode($current_data, true);  
+            $array_data = json_decode($current_data, true);
+            $actorsArray = explode(",", $_POST['actors']);
             $extra = array(  
                 'titel'        =>   $_POST['title'],
                 'regie'        =>   $_POST['regie'],
                 'genre'        =>   $_POST['genre'],
                 'jahr'         =>   $_POST['year'],
-                'schauspieler' =>   $_POST['actors'] 
+                'schauspieler' =>   $actorsArray 
             );  
             $array_data[] = $extra;  
             $final_data = json_encode($array_data);  
@@ -47,14 +48,13 @@
     <meta charset="utf-8">
     <title>Webslesson Tutorial | Append Data to JSON File using PHP</title>
     <link href="../css/layout.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  -->
 </head>  
 <body>  
     <br />  
-    <div class="container" style="width:500px;">  
-        <h3 align="">Append Data to JSON File</h3><br />                 
+    <div class="container" style="width:500px;">                 
         <form method="post">  
             <?php   
             if(isset($error))  
@@ -73,7 +73,7 @@
             <input type="text" name="regie" class="form-control" /><br /> 
             <label>Schauspieler (mehrere durch Kommata trennen)</label>  
             <input type="text" name="actors" class="form-control" /><br /> 
-            <input type="submit" name="submit" value="Append" class="btn btn-info" /><br />                      
+            <input type="submit" name="submit" value="Abschicken" class="btn btn-info" /><br />                      
             <?php  
             if(isset($message))  
             {  

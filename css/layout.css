@@ -1,5 +1,5 @@
 /*
-Version: CCG 1.0
+Version: NoirMDB 1.0
 Author: Anzhelika Katkova, Beate Nadolny, Lisa Schweiber
 */
 @charset "utf-8";
@@ -7,9 +7,14 @@ Author: Anzhelika Katkova, Beate Nadolny, Lisa Schweiber
   font-family: 'Franchise Fett';
   src: local('Franchise Fett'), url(../typo/Franchise-Bold-hinted.ttf);
 }
+body,html {
+	height:100%;
+	margin:0;
+	padding:0;
+}
 body {
 	font-family: calibri;
-	font-size: 20px;
+	font-size: 15px;
 	color: #fff;  /* d-braun, Schriftfarbe */
 }
 h1, h2, h3, h4, h5, h6 { /* Headlines */
@@ -34,6 +39,7 @@ main {
 	top: 30px;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 50px;
 	width: 80%;
 	min-width: 700px;
 	min-height: 90%;
@@ -43,12 +49,12 @@ article {
 	min-height: 400px;
 	padding: 30px 40px;
 }
-header, .header {
+header {
 	height: 220px;
 	overflow: hidden;
 	z-index: 1000;
 }
-::-webkit-scrollbar { 
+header::-webkit-scrollbar { 
     display: none; 
 }
 /* ~~ Menue-Div-Container ~~ */
