@@ -13,9 +13,9 @@
 		</td><td>
 		<img src="../images/spacer.png" width="50px">
 		</td><td>
-		<menubtn><a href="../index.html" target="_parent">Home</a></menubtn> | <menubtn><a href="../newMovie.html" target="_parent">Neuer Film</a></menubtn>
+		<a href="../index.html" target="_parent"><btn>Home</btn></a> | <a href="../movies.html" target="_parent"><btn>Alle Filme</btn></a> | <a href="../newMovie.html" target="_parent"><btn>Neuer Film</btn></a>
 		<h4>Persoenlicher Bereich</h4>
-		<menubtn><a href="../profile.php" target="_parent">Profil</a></menubtn>
-		</td>
+		<a href="../profile.php" target="_parent"><btn>Profil</btn></a>
+		</td></table>
 	</body>
 </html>
