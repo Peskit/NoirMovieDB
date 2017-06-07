@@ -16,11 +16,12 @@
       			$('#state').val('');
       			var searchField = $('#search').val();
       			var expression = new RegExp(searchField, "i");
-          		$.getJSON('../json/mylist.json', function(mylist) {
+                expression.toString();
+          		$.getJSON('../json/movielist.json', function(mylist) {
        				$.each(mylist, function(key, value) {
-        				if (value.regie.search(expression) != -1 || value.genre.search(expression) != -1 || valuetite.search(expression) != -1 || value.jahr.search(expression) != -1) {
-        				    $('#result').append('<li class="list-group-item link-class">' + value.regie + ' | <spanclass="text-muted">' + value.genre + ' | ' + value.titel + ' | ' + value.jahr + ' | ' + value.schauspieler + '</span></li>');
-        			    } //fehlt suche nach schauspieler
+        				if (value.regie.search(expression) != -1 || value.genre.search(expression) != -1 || value.titel.search(expression) != -1 || value.jahr.search(expression) != -1) {
+                            $('#result').append('<li class="list-group-item link-class">' + value.regie + ' | <spanclass="text-muted">' + value.genre + ' | ' + value.titel + ' | ' + value.jahr + ' | ' + value.schauspieler + '</span></li>');
+                        } //fehlt suche nach schauspieler
        				});   
                 });
      		});
