@@ -4,28 +4,15 @@
     <meta charset="utf-8">
     <link href="../css/layout.css" rel="stylesheet" type="text/css" media="screen"/>
     <title>MovieMain</title>
-<style>
-table,th,td {
-  border : 1px solid black;
-  border-collapse: collapse;
-}
-th,td {
-  padding: 5px;
-}
-</style>
 </head>
-<body>
-
-	 <p>Frage per HTTP-GET einen Rest-Service: </p>
+<body> 
+        <infobox>
+        <h3>Detailliertere Filminformationen</h3>
+        <p id='showDetail'></p>
+        </infobox><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <infolist>
         <p id="myMovie"> </p>
-        
-        <button type="button" onclick="loadDoc()">Meine Filme anzeigen</button>
-        
-        <p>Detailliert Filminformationen</p>
-		<p id='showMovie'></p>
-		
-		<p id="demo"></p>
-       
+        </infolist>
         <script>
             function loadDoc() {
             	
@@ -37,10 +24,10 @@ th,td {
                     if (this.readyState == 4 && this.status == 200) 
                     	
                     	myObj = JSON.parse(this.responseText);
-                    	txt += "<table border='1'>";
+                    	txt += "<table border='0'>";
                     	                    	
                     	for (x in myObj) {
-                            txt += "<tr><td>" + myObj[x].titel + "</td><td><button type='button' onclick='detailMovie("+x+")'>Details</button> </td></tr>";
+                            txt += "<tr><td>" + myObj[x].titel + "</td><td><button type='button' class='btn btn-info' onclick='detailMovie("+x+")'>Show Details</button> </td></tr>";
                             //wert immer so uebergeben: + x +
                         }
                         txt += "</table>";        
@@ -52,7 +39,7 @@ th,td {
                 //nochmal open macht nur letzte list auf "addliste.json", 
                 xhttp.send();
             }
-            
+            window.onload = loadDoc;
         </script>
         
         <script>
@@ -66,9 +53,9 @@ th,td {
                 if (this.readyState == 4 && this.status == 200)
                 	
                 	myObj = JSON.parse(this.responseText);                  	
-                    txt = "Titel: "+ myObj[i].titel + "<br> Regisseur: " + myObj[i].regie + "<br> Erscheinungsjahr: " 
-                    + myObj[i].jahr+ "<br> Genre: " + myObj[i].genre+ "<br> Schauspieler: " + myObj[i].schauspieler;
-               		document.getElementById("showMovie").innerHTML = txt;
+                    txt = "<table border='0'><tr><td>Titel: </td><td>"+ myObj[i].titel + "</td></tr><tr><td>Regisseur: </td><td>" + myObj[i].regie + "</td></tr><tr><td>Erscheinungsjahr: </td><td>" 
+                    + myObj[i].jahr+ "</td></tr><tr><td>Genre: </td><td>" + myObj[i].genre+ "</td></tr><tr><td>Schauspieler: </td><td>" + myObj[i].schauspieler + "</table>";
+               		document.getElementById("showDetail").innerHTML = txt;
            		};
            xhttp.open("GET", "../json/movielist.json", true);
            xhttp.send();
