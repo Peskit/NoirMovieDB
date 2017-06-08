@@ -18,7 +18,7 @@ body {
 	color: #fff;
 }
 h1, h2, h3, h4, h5, h6 { /* Headlines */
-	font-family: 'Franchise Fett', 'Calibri';
+	font-family: 'Franchise Fett', 'Calibri' !important;
 	padding: 0 20px;
 	margin-bottom: 8px;
 }
@@ -55,30 +55,29 @@ infobox {
 	position: fixed;
 }
 infolist {
+	background-color: rgba(0, 0, 0, 0.8);
 	position: fixed;
-	max-height: 300px;
+	max-height: 250px;
 	width: 100%;
 	overflow-y: auto;
+	z-index: 500;
 }
 header {
 	height: 220px;
 	overflow: hidden;
 	z-index: 1000;
 }
-header::-webkit-scrollbar { 
-    display: none; 
-}
 /* ~~ Conent-Style ~~ */ 
 table {
-	padding: 0 25px;
+	padding: 0 25px !important;
 	border: 0;
 }
 /* ~~ Origin: Bootstrap ~~ */ 
-btn, .btn {
+gbtn, .gbtn {
 	background-color: rgba(0, 0, 0, 0.5);
 	display: inline-block;
 	padding: 4px 8px;
-	margin-bottom: 0;
+	margin: 2px 5px;
 	font-family: 'Franchise Fett', 'Calibri';
 	font-size: 20px !important;
 	font-weight: normal;
@@ -97,17 +96,17 @@ btn, .btn {
 	border: 1px solid transparent;
 	border-radius: 4px;
 }
-.btn-info {
+.gbtn-info {
 	background-color: #5bc0de;
 	border-color: #46b8da;
 	color: #000;
 }
-.btn-info:focus,
-.btn-info.focus {
+.gbtn-info:focus,
+.gbtn-info.focus {
 	background-color: #31b0d5;
 	border-color: #1b6d85;
 }
-.btn-info:hover {
+.gbtn-info:hover {
 	background-color: #31b0d5;
 	border-color: #269abc;
 }

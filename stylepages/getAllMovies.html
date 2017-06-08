@@ -31,6 +31,9 @@
                     });   
                 });
             });
+            $('#result').on('click', 'li', function() {
+                $("#result").html('');
+            });
         });
     </script>
 
@@ -48,7 +51,7 @@
                         txt += "<table border='0'>";
                                                 
                         for (x in myObj) {
-                            txt += "<tr><td>" + myObj[x].titel + "</td><td><button type='button' class='btn btn-info' onclick='detailMovie("+x+")'>Show Details</button> </td></tr>";
+                            txt += "<tr><td>" + myObj[x].titel + "</td><td><button type='button' class='gbtn gbtn-info' onclick='detailMovie("+x+")'>Show Details</button> </td></tr>";
                             //wert immer so uebergeben: + x +
                         }
                         txt += "</table>";        
@@ -84,15 +87,17 @@
     </script>
 </head>
 <body> 
+        
         <input type="text" name="search" id="search" placeholder="Film suchen" class="form-control" />
-        <ul class="list-group" id="result"></ul>
-        <br /><br /><br />
+        <infolist><ul class="list-group" id="result"></ul>
+        </infolist> 
+        <br /><br />
         <infobox>
         <h3>Detailliertere Filminformationen</h3>
         <p id='showDetail'></p>
-        </infobox><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </infobox><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         <infolist>
-        <p id="myMovie"> </p>
+        <p id="myMovie"></p>
         </infolist>              
 </body>
 </html>
