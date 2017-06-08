@@ -73,7 +73,7 @@
             <input type="text" name="regie" class="form-control" /><br /> 
             <label>Schauspieler (mehrere durch Kommata trennen)</label>  
             <input type="text" name="actors" class="form-control" /><br /> 
-            <input type="submit" name="submit" value="Abschicken" class="btn btn-info" /><br />                      
+            <input type="submit" name="submit" value="Abschicken" class="gbtn gbtn-info" /><br />                      
             <?php  
             if(isset($message))  
             {  
